@@ -22,4 +22,5 @@ timeout /t 3 /nobreak > NUL
 
 powershell -Command "$p = [Environment]::GetEnvironmentVariable('Path', 'User'); if ($p -notlike '*%ipath%*') { [Environment]::SetEnvironmentVariable('Path', $p + ';%ipath%', 'User') }" > NUL 2>&1
 
+setx ipath "%ipath%" > NUL 2>&1
 echo Successfully installed.
