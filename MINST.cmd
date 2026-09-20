@@ -9,7 +9,7 @@ timeout /t 2 /nobreak > NUL
 echo Installing...
 echo Extracting files: %ipath%\meowls.exe 
 (
-    echo Get-ChildItem | ForEach-Object {
+    echo Get-ChildItem ^| ForEach-Object {
     echo     Write-Host "'$_'" -ForegroundColor Cyan
     echo }
 ) > "%ipath%\meowls.ps1"
