@@ -17,7 +17,7 @@ if exist "%ipath%\" (
         del "%temp%\pathcleanup.ps1" > NUL 2>&1
         
         if exist C:\ProgramData\Chocolatey\bin\RefreshEnv.cmd (
-           call C:\ProgramData\Chocolatey\bin\RefreshEnv.cmd
+           call C:\ProgramData\Chocolatey\bin\RefreshEnv.cmd > NUL 2>&1
         )
         echo Successfully uninstalled.
     ) else (
