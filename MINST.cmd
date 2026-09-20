@@ -24,3 +24,7 @@ powershell -Command "$p = [Environment]::GetEnvironmentVariable('Path', 'User');
 
 setx ipath "%ipath%" > NUL 2>&1
 echo Successfully installed.
+
+if exist C:\ProgramData\Chocolatey\bin\RefreshEnv.cmd (
+   call C:\ProgramData\Chocolatey\bin\RefreshEnv.cmd
+)
